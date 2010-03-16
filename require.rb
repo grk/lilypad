@@ -30,12 +30,14 @@ Require File.dirname(__FILE__) do
     gem :builder
     gem :rack
     require 'net/http'
+    require 'yaml'
     require "lib/lilypad/config"
     require "lib/lilypad/config/request"
     require "lib/lilypad/log"
     require "lib/lilypad/hoptoad/deploy"
     require "lib/lilypad/hoptoad/notify"
     require "lib/lilypad/hoptoad/xml"
+    require "lib/lilypad/redmine/notify"
     require "lib/rack/lilypad"
   end
   

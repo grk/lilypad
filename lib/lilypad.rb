@@ -25,7 +25,11 @@ class Lilypad
     
     def notify(exception, env=nil)
       if active? && should_notify?
-        Hoptoad::Notify.new env, exception
+        if Config.redmine_url
+          Redmine::Notify.new env, exception
+        else # send to Hoptoad
+          Hoptoad::Notify.new env, exception
+        end
       end
     end
     

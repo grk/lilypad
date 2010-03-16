@@ -45,6 +45,35 @@ class Lilypad
         @always_notify = always_notify
       end
       
+      def redmine_url(url=nil)
+        @redmine_url = url unless url.nil?
+        @redmine_url
+      end
+
+      def redmine_project(project=nil)
+        @redmine_project = project unless project.nil?
+        @redmine_project
+      end
+
+      def redmine_tracker(tracker=nil)
+        @redmine_tracker = tracker unless tracker.nil?
+        @redmine_tracker
+      end
+
+      def redmine_category(category=nil)
+        @redmine_category = category unless category.nil?
+        @redmine_category
+      end
+
+      def redmine_assigned_to(assigned_to=nil)
+        @redmine_assigned_to = assigned_to unless assigned_to.nil?
+        @redmine_assigned_to
+      end
+
+      def redmine_priority(priority=nil)
+        @redmine_priority = priority.to_i unless priority.nil?
+        @redmine_priority
+      end
     end
     
     module Methods
