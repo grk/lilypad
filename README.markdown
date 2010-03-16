@@ -136,8 +136,8 @@ Lilypad do
   redmine_project       "short name of the redmine project"
   redmine_tracker       "Bug"
   redmine_category      "category"  # optional
-  redmine_assigned_to   "admin"     #optional
-  redmine_priority      5           #optional
+  redmine_assigned_to   "admin"     # optional
+  redmine_priority      5           # optional
 </pre>
 
 Compatibility
