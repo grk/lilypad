@@ -24,13 +24,13 @@ class Lilypad
     end
     
     def notify(exception, env=nil)
-      if active? && production?
+      if active? && should_notify?
         Hoptoad::Notify.new env, exception
       end
     end
     
-    def production?
-      Config.environments.include? ENV['RACK_ENV']
+    def should_notify?
+      Config.always_notify || Config.environments.include?(ENV['RACK_ENV'])
     end
   end
 end

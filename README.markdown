@@ -120,6 +120,7 @@ Lilypad do
   log nil     # Path of Hoptoad log
   rails       # Requires the Rails adapter
   sinatra     # Requires the Sinatra adapter
+  always_notify # notify regardless of RACK_ENV
 end
 </pre>
 

@@ -40,6 +40,10 @@ class Lilypad
       def sinatra
         require "#{File.dirname(__FILE__)}/adapters/sinatra"
       end
+
+      def always_notify(always_notify=true)
+        @always_notify = always_notify
+      end
       
     end
     
