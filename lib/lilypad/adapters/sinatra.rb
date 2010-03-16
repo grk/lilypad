@@ -2,7 +2,7 @@ class Lilypad
   module Sinatra
     
     def self.included(base)
-      base.set(:raise_errors, true) if Lilypad.production?
+      base.set(:raise_errors, true) if Lilypad.should_notify?
     end
   end
 end
