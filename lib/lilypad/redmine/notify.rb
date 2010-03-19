@@ -75,11 +75,9 @@ class Lilypad
           request = Rack::Request.new @env
           params = request.params rescue Hash.new
           params = filter params
-          request_path = request.script_name + request.path_info
           session = request.session
         else
           params = {}
-          request_path = 'Internal'
           session = {}
         end
 
