@@ -3,7 +3,7 @@ class Lilypad
     
     def self.included(base)
       ENV['RACK_ENV'] = ENV['RAILS_ENV']
-      if Lilypad.production? && !base.included_modules.include?(InstanceMethods)
+      if Lilypad.should_notify? && !base.included_modules.include?(InstanceMethods)
         base.send :extend, ClassMethods
         base.send :include, InstanceMethods
         base.send :alias_method_chain, :rescue_action, :lilypad

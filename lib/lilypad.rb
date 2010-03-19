@@ -18,7 +18,7 @@ class Lilypad
     end
     
     def deploy(options)
-      if active? && production?
+      if active? && should_notify?
         Hoptoad::Deploy.new options
       end
     end
