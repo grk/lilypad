@@ -1,6 +1,6 @@
-class SinatraApp < Sinatra::Base
-  set :environment, :production
+Sinatra::Base.set :raise_errors, false
 
+class SinatraApp < Sinatra::Base
   use Rack::Lilypad, '' do
     sinatra
   end
